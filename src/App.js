@@ -8,13 +8,21 @@ import Maps from "./tabs/maps/Maps";
 import Weather from "./tabs/weather/Weather";
 import "./App.css";
 import { Typography } from "@mui/material";
+import Countries from "./tabs/countries/Countries";
+import Currency from "./tabs/currency/Currency";
 
 const TABS = [
     {
-        label: "OpenWeather"
+        label: "Open Weather"
     },
     {
         label: "Google Maps Platform"
+    },
+    {
+        label: "Countries"
+    },
+    {
+        label: "Currency Conversion"
     }
 ];
 
@@ -22,6 +30,10 @@ const renderTabContent = (tabIndex) => {
     switch (tabIndex) {
         case 1:
             return <Maps />;
+        case 2:
+            return <Countries />;
+        case 3:
+            return <Currency />;
         default:
             return <Weather />;
     }
